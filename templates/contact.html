@@ -1,0 +1,74 @@
+{% comment %} {% extends "base.html" %} {% endcomment %}
+{% include "partials/header.html" %}
+{% comment %} {% block content %} {% endcomment %}
+<style>
+    .contact-container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 40px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-container h1 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    .contact-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-container input, .contact-container textarea {
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .contact-container button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .contact-container button:hover {
+        background-color: #0056b3;
+    }
+
+    .contact-info {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 1em;
+        color: #555;
+    }
+</style>
+
+<div class="contact-container">
+    <h1>Contact Us</h1>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+        <p>📞 Phone: +919380089949</p>
+        <p>📧 Email: sarvesh@gmail.com</p>
+        <p>📍 Address: 123 Main Street, Karnataka, India</p>
+    </div>
+</div>
+{% comment %} {% endblock content %} {% endcomment %}
+{% include "partials/footer.html" %}
